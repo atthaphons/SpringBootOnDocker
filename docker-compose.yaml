@@ -1,9 +1,9 @@
-version: '3.8'
+version: "3.8"
 services:
   springbootdocker:
-    image:  tomcat:9.0.35-jdk11-openjdk-slim
-    volumes: 
-      - "./src/main/resources/static:/usr/local/tomcat/webapps/ROOT"
-      - "./build/libs/ExamSpringBootDemo-0.0.1-SNAPSHOT.war:/usr/local/tomcat/webapps/ExamSpringBootDemo.war"
-    ports: 
+    image: tomcat:9.0.35-jdk11-openjdk-slim
+    volumes:
+      - "./web/static:/usr/local/tomcat/webapps/ROOT"
+      - "./build/libs/ExamSpringBootDemo-0.0.1-SNAPSHOT.war:/usr/local/tomcat/webapps/api.war"
+    ports:
       - "4444:8080"

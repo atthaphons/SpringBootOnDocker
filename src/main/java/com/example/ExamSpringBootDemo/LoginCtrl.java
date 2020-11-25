@@ -8,7 +8,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/api/v1/login")
+@RequestMapping("/v1/login")
 @Slf4j
 public class LoginCtrl {
     @GetMapping("/go/{userid}/{pass}")
