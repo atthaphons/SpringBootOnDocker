@@ -35,6 +35,6 @@ out/
 
 
 ### Gradle ###
-.gradle/
+.gradle/*
 
 **output/
