@@ -11,7 +11,7 @@ Suite Teardown    Close Browser
 
 *** Keywords ***
 1. เปิดเว็บ Springboot
-    Open Browser    http://localhost:8084/pages/login/login.html    chrome
+    Open Browser    http://localhost:4444/pages/login/login.html    chrome
     Capture Page Screenshot
 2. กรอก Username/Password
     [Arguments]    ${username}    ${password}

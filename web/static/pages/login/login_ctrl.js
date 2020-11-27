@@ -1,5 +1,5 @@
 var myModel = {
-    loginHeader: "LOG IN",
+    loginHeader: "LOG IN 2",
     // loginClick: "GO",
     loginApiClick: "GO",
     username: "",
@@ -28,7 +28,7 @@ var LoginModel = new Vue({
         getApiLogin: function () {
             if ($('#loginForm').form('validate form')) {
                 vm = this;
-                axios.get('/ExamSpringBootDemo/api/v1/login/go/' + this.username + "/" + this.password)
+                axios.get('/api/v1/login/go/' + this.username + "/" + this.password)
                     .then(function (response) {
                         // response => (this.info = response)
                         if (response.data == "COM001LOGIN0INF") {
