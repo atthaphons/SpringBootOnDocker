@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 3.2.1 (Python 3.7.8 on win32)" generated="20201129 06:57:07.576" rpa="false">
+<suite id="s1" name="Scenario1" source="D:\Work\GitHubWorking\ExamSpringBootDemo\at_script\scenario\scenario1.robot">
+<test id="s1-t1" name="เข้าหน้าเว็บ">
+<kw name="1. เปิดเว็บ Springboot">
+<kw name="Open Browser" library="SeleniumLibrary">
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<arguments>
+<arg>http://localhost:4444/pages/login/login.html</arg>
+<arg>chrome</arg>
+</arguments>
+<msg timestamp="20201129 06:57:07.807" level="INFO">Opening browser 'chrome' to base url 'http://localhost:4444/pages/login/login.html'.</msg>
+<status status="PASS" starttime="20201129 06:57:07.807" endtime="20201129 06:57:11.698"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201129 06:57:12.168" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201129 06:57:11.698" endtime="20201129 06:57:12.168"></status>
+</kw>
+<status status="PASS" starttime="20201129 06:57:07.806" endtime="20201129 06:57:12.169"></status>
+</kw>
+<kw name="2. กรอก Username/Password">
+<arguments>
+<arg>admin</arg>
+<arg>1234</arg>
+</arguments>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>username</arg>
+<arg>${username}</arg>
+</arguments>
+<msg timestamp="20201129 06:57:12.171" level="INFO">Typing text 'admin' into text field 'username'.</msg>
+<status status="PASS" starttime="20201129 06:57:12.171" endtime="20201129 06:57:12.348"></status>
+</kw>
+<kw name="Input Text" library="SeleniumLibrary">
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<arguments>
+<arg>password</arg>
+<arg>${password}</arg>
+</arguments>
+<msg timestamp="20201129 06:57:12.349" level="INFO">Typing text '1234' into text field 'password'.</msg>
+<status status="PASS" starttime="20201129 06:57:12.348" endtime="20201129 06:57:12.468"></status>
+</kw>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201129 06:57:12.825" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-2.png"&gt;&lt;img src="selenium-screenshot-2.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201129 06:57:12.469" endtime="20201129 06:57:12.825"></status>
+</kw>
+<status status="PASS" starttime="20201129 06:57:12.170" endtime="20201129 06:57:12.826"></status>
+</kw>
+<kw name="3. กด login">
+<kw name="Click Element" library="SeleniumLibrary">
+<doc>Click the element identified by ``locator``.</doc>
+<arguments>
+<arg>jquery:#loginButton</arg>
+</arguments>
+<msg timestamp="20201129 06:57:12.828" level="INFO">Clicking element 'jquery:#loginButton'.</msg>
+<status status="PASS" starttime="20201129 06:57:12.828" endtime="20201129 06:57:12.916"></status>
+</kw>
+<status status="PASS" starttime="20201129 06:57:12.827" endtime="20201129 06:57:12.917"></status>
+</kw>
+<kw name="4. ตรวจสอบว่ามี username">
+<arguments>
+<arg>admin</arg>
+</arguments>
+<kw name="Element Should Contain" library="SeleniumLibrary">
+<doc>Verifies that element ``locator`` contains text ``expected``.</doc>
+<arguments>
+<arg>jquery:.userinfo</arg>
+<arg>${username}</arg>
+</arguments>
+<kw name="Capture Page Screenshot" library="SeleniumLibrary">
+<doc>Takes a screenshot of the current page and embeds it into a log file.</doc>
+<msg timestamp="20201129 06:57:13.587" level="INFO" html="yes">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-3.png"&gt;&lt;img src="selenium-screenshot-3.png" width="800px"&gt;&lt;/a&gt;</msg>
+<status status="PASS" starttime="20201129 06:57:12.928" endtime="20201129 06:57:13.587"></status>
+</kw>
+<msg timestamp="20201129 06:57:13.591" level="FAIL">Element with locator 'jquery:.userinfo' not found.</msg>
+<status status="FAIL" starttime="20201129 06:57:12.918" endtime="20201129 06:57:13.592"></status>
+</kw>
+<status status="FAIL" starttime="20201129 06:57:12.918" endtime="20201129 06:57:13.592"></status>
+</kw>
+<status status="FAIL" starttime="20201129 06:57:07.805" endtime="20201129 06:57:13.593" critical="yes">Element with locator 'jquery:.userinfo' not found.</status>
+</test>
+<status status="FAIL" starttime="20201129 06:57:07.579" endtime="20201129 06:57:13.603"></status>
+</suite>
+<statistics>
+<total>
+<stat pass="0" fail="1">Critical Tests</stat>
+<stat pass="0" fail="1">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="0" fail="1" id="s1" name="Scenario1">Scenario1</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>

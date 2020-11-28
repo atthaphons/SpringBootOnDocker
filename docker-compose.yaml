@@ -4,6 +4,6 @@ services:
     image: tomcat:9.0.35-jdk11-openjdk-slim
     volumes:
       - "./web/static:/usr/local/tomcat/webapps/ROOT"
-      - "./build/libs/ExamSpringBootDemo-0.0.1-SNAPSHOT.war:/usr/local/tomcat/webapps/api.war"
+      - "./api/build/libs/ExamSpringBootDemo-0.0.1-SNAPSHOT.war:/usr/local/tomcat/webapps/api.war"
     ports:
       - "4444:8080"

@@ -1,6 +1,6 @@
 *** Settings ***
 Library    SeleniumLibrary
-Suite Teardown    Close Browser
+# Suite Teardown    Close Browser
 
 *** Test Cases ***
 เข้าหน้าเว็บ
